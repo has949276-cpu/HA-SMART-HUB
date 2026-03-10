@@ -1,129 +1,204 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="ar" dir="rtl" id="mainHtml">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
     <meta name="google-site-verification" content="BQj8t2TI1qrN7sbOJ-MweGBmTAs6fSymZlA7fd-aeOI" />
 
-    <title>مركز الأدوات الذكية PRO | حاسبات وأدوات مجانية أونلاين</title>
-    <meta name="description" content="أفضل مجموعة أدوات مجانية للمحترفين: عداد كلمات دقيق، مولد كلمات سر قوية، حاسبة خصم مالي، وحاسبة مؤشر كتلة الجسم BMI. أدوات سريعة وسهلة الاستخدام للمستخدم العربي.">
-    <meta name="keywords" content="عداد كلمات، مولد كلمات سر، حاسبة BMI، حاسبة خصم، أدوات ويب مجانية، حساب الوزن المثالي، مركز الأدوات الذكية">
-    <link rel="canonical" href="https://has949276-cpu.github.io/" />
-
-    <meta property="og:title" content="مركز الأدوات الذكية PRO - أدوات احترافية مجانية">
-    <meta property="og:description" content="استخدم أدواتنا المجانية لتحسين إنتاجيتك: من عداد الكلمات إلى الحاسبات الصحية والمالية في مكان واحد.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://has949276-cpu.github.io/">
-    <meta name="twitter:card" content="summary_large_image">
-
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
+    <title id="metaTitle">مركز الأدوات الذكية PRO | حاسبات وأدوات مجانية أونلاين</title>
+    <meta name="description" content="أفضل مجموعة أدوات مجانية للمحترفين: عداد كلمات دقيق، مولد كلمات سر قوية، حاسبة خصم مالي، وحاسبة مؤشر كتلة الجسم BMI.">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&family=Inter:wght@400;700&display=swap" rel="stylesheet">
     
     <script src="https://pl28825044.effectivegatecpm.com/c3/eb/01/c3eb01a1312b0990825156562c460151.js"></script>
 
     <style>
         :root { --p: #10b981; --d: #0d1117; --v: #f59e0b; --l: #f3f4f6; --bg: #161b22; }
-        * { box-sizing: border-box; font-family: 'Cairo', sans-serif; -webkit-user-select: none; user-select: none; }
-        body { background: var(--d); color: var(--l); margin: 0; padding-bottom: 50px; }
+        * { box-sizing: border-box; transition: all 0.2s ease; }
+        body { background: var(--d); color: var(--l); margin: 0; padding-bottom: 50px; font-family: 'Cairo', sans-serif; }
         
-        .header { background: linear-gradient(135deg, #1f2937, #0d1117); padding: 40px 20px; text-align: center; border-bottom: 2px solid var(--v); }
-        .nav-tabs { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-top: 20px; }
-        .tab-btn { background: var(--bg); border: 1px solid #30363d; color: white; padding: 10px 20px; border-radius: 8px; cursor: pointer; transition: 0.3s; }
+        .lang-switcher { position: fixed; top: 15px; left: 15px; z-index: 1000; }
+        .lang-btn { background: var(--v); color: #000; border: none; padding: 8px 15px; border-radius: 20px; font-weight: bold; cursor: pointer; box-shadow: 0 4px 15px rgba(0,0,0,0.3); }
+
+        .header { background: linear-gradient(135deg, #1f2937, #0d1117); padding: 60px 20px 40px; text-align: center; border-bottom: 2px solid var(--v); }
+        .nav-tabs { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-top: 20px; }
+        .tab-btn { background: var(--bg); border: 1px solid #30363d; color: white; padding: 10px 15px; border-radius: 8px; cursor: pointer; font-size: 0.9rem; }
         .tab-btn.active { background: var(--p); border-color: var(--p); }
 
         .container { max-width: 900px; margin: auto; padding: 20px; }
         .ad-box { background: rgba(255,255,255,0.05); border: 1px dashed #444; margin: 20px 0; text-align: center; min-height: 90px; border-radius: 12px; display: flex; align-items: center; justify-content: center; overflow: hidden; }
         
-        .tool-content { display: none; background: var(--bg); padding: 30px; border-radius: 15px; border: 1px solid #30363d; animation: fadeIn 0.5s; }
+        .tool-content { display: none; background: var(--bg); padding: 30px; border-radius: 15px; border: 1px solid #30363d; animation: fadeIn 0.4s; }
         .tool-content.active { display: block; }
         @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
 
-        input, select, textarea { width: 100%; padding: 12px; margin: 10px 0; border-radius: 8px; border: 1px solid #30363d; background: #0d1117; color: white; }
-        .btn-action { width: 100%; background: var(--v); border: none; padding: 15px; color: #000; font-weight: bold; border-radius: 8px; cursor: pointer; font-size: 1.1rem; }
+        input, textarea { width: 100%; padding: 12px; margin: 10px 0; border-radius: 8px; border: 1px solid #30363d; background: #0d1117; color: white; font-size: 1rem; }
+        .btn-action { width: 100%; background: var(--v); border: none; padding: 15px; color: #000; font-weight: bold; border-radius: 8px; cursor: pointer; font-size: 1.1rem; margin-top: 10px; }
         
-        .loop-section { background: rgba(245, 158, 11, 0.05); border: 2px solid var(--v); padding: 20px; border-radius: 15px; margin-top: 40px; text-align: center; }
-        .loop-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 15px; }
-        .loop-card { background: var(--bg); padding: 15px; border-radius: 10px; text-decoration: none; color: white; border: 1px solid #30363d; transition: 0.3s; }
-        .loop-card:hover { border-color: var(--p); transform: scale(1.02); }
+        .article-card { background: #1c2128; padding: 25px; border-radius: 12px; margin-bottom: 25px; border-right: 5px solid var(--p); line-height: 1.8; }
+        .article-card h2 { color: var(--v); margin-top: 0; font-size: 1.5rem; }
+        .article-card b { color: var(--p); }
 
-        @media (max-width: 600px) { .loop-grid { grid-template-columns: 1fr; } }
+        .network-section { background: rgba(16, 185, 129, 0.05); border: 2px solid var(--p); padding: 25px; border-radius: 15px; margin-top: 40px; text-align: center; }
+        .network-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; margin-top: 20px; }
+        .network-card { background: var(--bg); padding: 15px; border-radius: 10px; text-decoration: none; color: white; border: 1px solid #30363d; }
+        .network-card:hover { border-color: var(--v); transform: translateY(-3px); }
+
+        html[lang="en"] { direction: ltr; }
+        html[lang="en"] body { font-family: 'Inter', sans-serif; }
+        html[lang="en"] .article-card { border-right: none; border-left: 5px solid var(--p); }
+
+        @media (max-width: 600px) { .network-grid { grid-template-columns: 1fr; } .tab-btn { flex: 1 1 45%; } }
     </style>
     <script defer src="https://cloud.umami.is/script.js" data-website-id="d08acf53-9f4e-4baa-944d-bb8d0f831957"></script>
 </head>
 <body>
 
+<div class="lang-switcher">
+    <button class="lang-btn" onclick="toggleLang()" id="langBtn">English</button>
+</div>
+
 <div class="header">
-    <h1 style="color: var(--v); margin: 0;">مركز الأدوات الذكية PRO</h1>
-    <p>كل ما تحتاجه من أدوات في صفحة واحدة سريعة</p>
+    <h1 id="mainTitle" style="color: var(--v); margin: 0;">مركز الأدوات الذكية PRO</h1>
+    <p id="mainDesc">كل ما تحتاجه من أدوات في صفحة واحدة سريعة</p>
     <div class="nav-tabs">
-        <button class="tab-btn active" onclick="openTab('wordCount')">📝 عداد الكلمات</button>
-        <button class="tab-btn" onclick="openTab('passGen')">🔐 مولد السر</button>
-        <button class="tab-btn" onclick="openTab('discount')">💰 الحاسبة المالية</button>
-        <button class="tab-btn" onclick="openTab('health')">⚖️ حاسبة الوزن</button>
+        <button class="tab-btn active" id="tab1" onclick="openTab('wordCount')">📝 عداد الكلمات</button>
+        <button class="tab-btn" id="tab2" onclick="openTab('passGen')">🔐 مولد السر</button>
+        <button class="tab-btn" id="tab3" onclick="openTab('discount')">💰 المالية</button>
+        <button class="tab-btn" id="tab4" onclick="openTab('health')">⚖️ الصحة</button>
+        <button class="tab-btn" id="tab5" onclick="openTab('articlesTab')" style="border-color: var(--v);">📚 مقالات ضخمة</button>
     </div>
 </div>
 
 <div class="container">
     <div class="ad-box">
-        <script async="async" data-cfasync="false" src="https://pl28825118.effectivegatecpm.com/6176d6409e3673252f81c5cbb95ba586/invoke.js"></script>
         <div id="container-6176d6409e3673252f81c5cbb95ba586"></div>
     </div>
 
     <div id="wordCount" class="tool-content active">
-        <h3>عداد الكلمات والحروف</h3>
+        <h3 id="tool1Title">عداد الكلمات والحروف</h3>
         <textarea id="textInput" rows="6" placeholder="أدخل النص هنا..." oninput="countText()"></textarea>
         <div style="display: flex; gap: 20px; font-weight: bold; color: var(--p);">
-            <p>الكلمات: <span id="wCount">0</span></p>
-            <p>الحروف: <span id="cCount">0</span></p>
+            <p><span id="labelWords">الكلمات</span>: <span id="wCount">0</span></p>
+            <p><span id="labelChars">الحروف</span>: <span id="cCount">0</span></p>
+        </div>
+    </div>
+
+    <div id="articlesTab" class="tool-content">
+        <div class="article-card">
+            <h2 id="art1Title">دليل احتراف أوامر الذكاء الاصطناعي 2026</h2>
+            <p id="art1Body">في عام 2026، أصبح استخدام الذكاء الاصطناعي مهارة أساسية. السر لا يكمن في الأداة بل في "البرومبت". للحصول على أفضل النتائج، يجب أن يكون أمرك محدداً ويحتوي على سياق. <br><br><b>نصيحة:</b> احصل على 150 أمر جاهز في <a href="https://has949276-cpu.github.io/HA-SMART-HUB/" style="color:var(--p);">HA Smart Hub</a> لتوفير وقتك.</p>
+        </div>
+        <div class="article-card" style="border-color: #60a5fa;">
+            <h2 id="art2Title">الأمن الرقمي وإدارة المهام</h2>
+            <p id="art2Body">كلمات السر الضعيفة خطر كبير. استخدم مولدنا للأمان، ونظم أهدافك اليومية عبر أداة <a href="https://has949276-cpu.github.io/task-master/" style="color:#60a5fa;">Task Master</a> لزيادة إنتاجيتك بنسبة 40%.</p>
+        </div>
+        <div class="article-card" style="border-color: var(--v);">
+            <h2 id="art3Title">Future of Web Development 2026</h2>
+            <p id="art3Body">Modern developers need fast utilities. Explore our <a href="https://has949276-cpu.github.io/prompt-base/" style="color:var(--v);">Prompt Base</a> library for AI commands that help you build better web applications faster.</p>
+        </div>
+        <div class="article-card" style="border-color: #ef4444;">
+            <h2 id="art4Title">أهمية الحاسبات الدقيقة في الهندسة</h2>
+            <p id="art4Body">الدقة هي أساس النجاح. منصة <a href="https://has949276-cpu.github.io/engali/" style="color:#ef4444;">EngAli</a> توفر حاسبات هندسية متخصصة لضمان نجاح مشاريعك بدون أي أخطاء حسابية.</p>
         </div>
     </div>
 
     <div id="passGen" class="tool-content">
-        <h3>مولد كلمات السر القوية</h3>
+        <h3 id="tool2Title">مولد كلمات السر القوية</h3>
         <input type="text" id="passOutput" readonly placeholder="ستظهر كلمة السر هنا">
-        <button class="btn-action" onclick="genPass()">توليد كلمة سر آمنة</button>
+        <button class="btn-action" id="btnGen" onclick="genPass()">توليد كلمة سر آمنة</button>
     </div>
 
     <div id="discount" class="tool-content">
-        <h3>حاسبة الخصم والنسبة</h3>
+        <h3 id="tool3Title">حاسبة الخصم والنسبة</h3>
         <input type="number" id="billAmount" placeholder="السعر الأصلي">
         <input type="number" id="discountPerc" placeholder="نسبة الخصم %">
-        <button class="btn-action" onclick="calcDiscount()">احسب السعر النهائي</button>
+        <button class="btn-action" id="btnCalc1" onclick="calcDiscount()">احسب السعر النهائي</button>
         <h4 id="discResult" style="text-align: center; color: var(--p);"></h4>
     </div>
 
     <div id="health" class="tool-content">
-        <h3>حاسبة مؤشر كتلة الجسم (BMI)</h3>
+        <h3 id="tool4Title">حاسبة مؤشر كتلة الجسم (BMI)</h3>
         <input type="number" id="weight" placeholder="الوزن بالـ كجم">
         <input type="number" id="height" placeholder="الطول بالـ سم">
-        <button class="btn-action" onclick="calcBMI()">احسب حالتي الصحية</button>
+        <button class="btn-action" id="btnCalc2" onclick="calcBMI()">احسب حالتي الصحية</button>
         <h4 id="bmiResult" style="text-align: center; color: var(--v);"></h4>
     </div>
 
     <div class="ad-box">
+        <script async="async" data-cfasync="false" src="https://pl28825118.effectivegatecpm.com/6176d6409e3673252f81c5cbb95ba586/invoke.js"></script>
         <div id="container-6176d6409e3673252f81c5cbb95ba586"></div>
     </div>
 
-    <div class="loop-section">
-        <h3 style="margin-top: 0;">🚀 استكشف المزيد من أدواتنا</h3>
-        <div class="loop-grid">
-            <a href="https://has949276-cpu.github.io/ai-mastery/" class="loop-card">
-                <strong style="color: var(--v);">أوامر الذكاء الاصطناعي</strong>
-                <p style="font-size: 0.8rem; margin: 5px 0;">+150 أمر حصري لـ ChatGPT و Midjourney</p>
-            </a>
-            <a href="https://has949276-cpu.github.io/engineering-calculators/" class="loop-card">
-                <strong style="color: var(--p);">الحاسبات الهندسية</strong>
-                <p style="font-size: 0.8rem; margin: 5px 0;">أدوات دقيقة للمهندسين والطلاب</p>
-            </a>
+    <div class="network-section">
+        <h3 id="networkTitle">🚀 استكشف شبكة مواقعنا الاحترافية</h3>
+        <div class="network-grid">
+            <a href="https://has949276-cpu.github.io/task-master/" class="network-card"><strong>Task Master</strong><p id="net1">إدارة المهام بكفاءة</p></a>
+            <a href="https://has949276-cpu.github.io/HA-SMART-HUB/" class="network-card"><strong>HA Smart Hub</strong><p id="net2">مكتبة الذكاء الاصطناعي</p></a>
+            <a href="https://has949276-cpu.github.io/prompt-base/" class="network-card"><strong>Prompt Base</strong><p id="net3">قاعدة الأوامر الذكية</p></a>
+            <a href="https://has949276-cpu.github.io/engali/" class="network-card"><strong>EngAli</strong><p id="net4">حاسبات هندسية</p></a>
         </div>
-    </div>
-
-    <div class="ad-box">
-        <p style="color: #484f58; font-size: 0.8rem;">مساحة إعلانية إضافية</p>
     </div>
 </div>
 
 <script>
+    let currentLang = 'ar';
+    const langData = {
+        en: {
+            title: "Smart Tools PRO", desc: "Premium utilities in one fast page",
+            t1: "📝 Word Count", t2: "🔐 Password", t3: "💰 Finance", t4: "⚖️ Health", t5: "📚 Articles",
+            tool1: "Word Counter", labelWords: "Words", labelChars: "Chars",
+            tool2: "Safe Password Generator", btnGen: "Generate Now",
+            tool3: "Discount Calculator", btnCalc: "Calculate Price",
+            tool4: "BMI Calculator", btnBMI: "Check Health",
+            netTitle: "🚀 Explore Our Network",
+            art1T: "Mastering AI Prompts 2026", art1B: "The secret is the 'Prompt'. Get 150+ ready prompts at HA Smart Hub to save time.",
+            art2T: "Security & Productivity", art2B: "Use our generator for security, and manage goals with Task Master for 40% more efficiency.",
+            art3T: "Future of Web Development 2026", art3B: "Developers need fast utilities. Explore Prompt Base for AI commands to build faster apps.",
+            art4T: "Precision in Engineering", art4B: "Accuracy is key. EngAli platform provides specialized calculators for your projects."
+        },
+        ar: {
+            title: "مركز الأدوات الذكية PRO", desc: "كل ما تحتاجه من أدوات في صفحة واحدة سريعة",
+            t1: "📝 عداد الكلمات", t2: "🔐 مولد السر", t3: "💰 المالية", t4: "⚖️ الصحة", t5: "📚 مقالات ضخمة",
+            tool1: "عداد الكلمات والحروف", labelWords: "الكلمات", labelChars: "الحروف",
+            tool2: "مولد كلمات السر القوية", btnGen: "توليد كلمة سر آمنة",
+            tool3: "حاسبة الخصم والنسبة", btnCalc: "احسب السعر النهائي",
+            tool4: "حاسبة مؤشر كتلة الجسم (BMI)", btnBMI: "احسب حالتي الصحية",
+            netTitle: "🚀 استكشف شبكة مواقعنا الاحترافية",
+            art1T: "دليل احتراف أوامر الذكاء الاصطناعي 2026", art1B: "السر في الذكاء الاصطناعي هو البرومبت. احصل على 150 أمر جاهز في HA Smart Hub لتوفير وقتك.",
+            art2T: "الأمن الرقمي وإدارة المهام", art2B: "كلمات السر الضعيفة خطر. استخدم مولدنا للأمان، ونظم أهدافك عبر Task Master لزيادة إنتاجيتك.",
+            art3T: "Future of Web Development 2026", art3B: "المبرمجون يحتاجون أدوات سريعة. استكشف مكتبة الأوامر في Prompt Base لمساعدتك في بناء تطبيقات أفضل.",
+            art4T: "أهمية الحاسبات الدقيقة في الهندسة", art4B: "الدقة هي أساس النجاح. منصة EngAli توفر حاسبات هندسية متخصصة لضمان نجاح مشاريعك."
+        }
+    };
+
+    function toggleLang() {
+        currentLang = currentLang === 'ar' ? 'en' : 'ar';
+        const html = document.getElementById('mainHtml');
+        html.lang = currentLang; html.dir = currentLang === 'ar' ? 'rtl' : 'ltr';
+        document.getElementById('langBtn').innerText = currentLang === 'ar' ? 'English' : 'العربية';
+        const d = langData[currentLang];
+        document.getElementById('mainTitle').innerText = d.title;
+        document.getElementById('mainDesc').innerText = d.desc;
+        document.getElementById('tab1').innerText = d.t1; document.getElementById('tab2').innerText = d.t2;
+        document.getElementById('tab3').innerText = d.t3; document.getElementById('tab4').innerText = d.t4;
+        document.getElementById('tab5').innerText = d.t5;
+        document.getElementById('tool1Title').innerText = d.tool1;
+        document.getElementById('labelWords').innerText = d.labelWords;
+        document.getElementById('labelChars').innerText = d.labelChars;
+        document.getElementById('tool2Title').innerText = d.tool2;
+        document.getElementById('btnGen').innerText = d.btnGen;
+        document.getElementById('tool3Title').innerText = d.tool3;
+        document.getElementById('btnCalc1').innerText = d.btnCalc;
+        document.getElementById('tool4Title').innerText = d.tool4;
+        document.getElementById('btnCalc2').innerText = d.btnBMI;
+        document.getElementById('networkTitle').innerText = d.netTitle;
+        document.getElementById('art1Title').innerText = d.art1T; document.getElementById('art1Body').innerHTML = d.art1B;
+        document.getElementById('art2Title').innerText = d.art2T; document.getElementById('art2Body').innerHTML = d.art2B;
+        document.getElementById('art3Title').innerText = d.art3T; document.getElementById('art3Body').innerHTML = d.art3B;
+        document.getElementById('art4Title').innerText = d.art4T; document.getElementById('art4Body').innerHTML = d.art4B;
+    }
+
     function openTab(tabId) {
         document.querySelectorAll('.tool-content').forEach(t => t.classList.remove('active'));
         document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
@@ -149,7 +224,7 @@
         let per = document.getElementById('discountPerc').value;
         if(amt && per) {
             let final = amt - (amt * per / 100);
-            document.getElementById('discResult').innerText = "السعر بعد الخصم: " + final.toFixed(2) + "$";
+            document.getElementById('discResult').innerText = (currentLang === 'ar' ? "السعر: " : "Price: ") + final.toFixed(2) + "$";
         }
     }
 
@@ -158,11 +233,11 @@
         let h = document.getElementById('height').value / 100;
         if(w && h) {
             let bmi = w / (h * h);
-            let status = bmi < 18.5 ? "نحافة" : bmi < 25 ? "وزن مثالي" : "زيادة وزن";
-            document.getElementById('bmiResult').innerText = "مؤشرك: " + bmi.toFixed(1) + " (" + status + ")";
+            let status = currentLang === 'ar' ? (bmi < 18.5 ? "نحافة" : bmi < 25 ? "مثالي" : "زيادة") : (bmi < 18.5 ? "Thin" : bmi < 25 ? "Ideal" : "Overweight");
+            document.getElementById('bmiResult').innerText = "BMI: " + bmi.toFixed(1) + " (" + status + ")";
         }
     }
 </script>
-
 </body>
 </html>
+
